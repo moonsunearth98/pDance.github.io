@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us  😊</title>
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    <link rel="stylesheet" href="contact.js">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+</head>
+
+<body>
+    <div class="left1">
+        <img src="img2/Prachi.logo.png" alt="">
+    </div>
+
+    <div class="container">
+        <div class="contact-box">
+            <div class="left"></div>
+            <div class="right">
+                <h2>Contact Us</h2>
+            <form method="POST" autocomplete="off" name="google-sheet">
+                <input type="text" name="Name" class="field" placeholder="Your Name">
+                <input type="text" name="Email i'd" class="field" placeholder="Your Email">
+                <input type="text" name="Phone Number" class="field" placeholder="Phone">
+                <textarea placeholder="Message" name="Message" class="field"></textarea>
+                <h5>prachibaranwal27@bbdnitm.ac.in</h5>
+                <h6>     +91 9876543210 </h6>
+                <br>
+                <button class="btn">Send</button>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxDWKTXOmiHRXHkM4exfXnexIrXcd1X95WDSGPuHJkQMDst11yGRNXitw/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+</body>
+
+</html>
